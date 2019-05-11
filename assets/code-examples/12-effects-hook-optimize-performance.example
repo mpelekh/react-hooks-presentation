@@ -1,0 +1,30 @@
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.count !== this.state.count) {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+}
+
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // Only re-run the effect if count changes
+
+useEffect(() => {
+  function handleStatusChange(status) {
+    setIsOnline(status.isOnline);
+  }
+
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  return () => {
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+  };
+}, [props.friend.id]); // Only re-subscribe if props.friend.id changes
+
+// If you want to run an effect and clean it up only once (on mount and unmount),
+// you can pass an empty array ([]) as a second argument.
+useEffect(() => {
+  document.title = `Will be updated on mount`;
+
+  return () => {
+    document.title = `Will be updated on unmount`;
+  }
+}, []);

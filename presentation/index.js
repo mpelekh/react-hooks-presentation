@@ -219,6 +219,85 @@ export default class Presentation extends React.Component {
           <CounterClassInsteadOfEffect/>
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Effects with Cleanup
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            Example Using Classes
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.5em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/8-cleanup-effects-class.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            Example Using Effect Hook
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.7em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/9-cleanup-effects-hook.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            It cleans up the previous effects before applying the next effects.
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.8em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/10-cleanup-effects-hook-explanation.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Use Multiple Effects to Separate Concerns
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          transition={[]}
+          textSize="0.7em"
+          lang="jsx"
+          code={require('raw-loader!../assets/code-examples/11-effects-hook-separate-contexts.example')}
+          ranges={[
+            { loc: [0, 0], title: 'Multiple Effects to Separate Concerns' },
+            { loc: [1, 5] },
+            { loc: [6, 17] },
+          ]}
+          align="flex-start flex-start"
+        />
+
+        <CodeSlide
+          transition={[]}
+          textSize="0.7em"
+          lang="jsx"
+          code={require('raw-loader!../assets/code-examples/12-effects-hook-optimize-performance.example')}
+          ranges={[
+            { loc: [0, 0], title: 'Optimizing Performance by Skipping Effects' },
+            { loc: [0, 5] },
+            { loc: [6, 9] },
+            { loc: [10, 20] },
+            { loc: [21, 30] },
+          ]}
+          align="flex-start flex-start"
+        />
+
       </Deck>
     );
   }
