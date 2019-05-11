@@ -1,0 +1,20 @@
+class FriendStatus extends React.Component {
+  render() { return ...; }
+
+  componentDidMount() {
+    this.subscribeToStore(this.props.friendId);
+    this.fetchFriendStatus(this.props.friendId);
+    this.startTimers();
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeToStore(this.props.friendId);
+    this.cancelPendingRequests();
+    this.stopTimers();
+  }
+
+  componentDidUpdate() {
+    ...
+    this.fetchFriendStatus(this.props.friendId);
+  }
+}
