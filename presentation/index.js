@@ -13,7 +13,8 @@ import { CustomLink as Link } from './components/CustomLink';
 import { Emphasize } from './components/Emphasize';
 
 // Import Example Components
-import { Counter } from './components/examples/Counter';
+import { CounterWithHook } from './components/examples/CounterWithHook';
+import { CounterAsClass } from './components/examples/CounterAsClass';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -142,7 +143,20 @@ export default class Presentation extends React.Component {
             textSize="0.9em"
             source={require('raw-loader!../assets/code-examples/3-counter-hook.example')}
           />
-          <Counter/>
+          <CounterWithHook/>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            If you used classes in React before, this code should look familiar:
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.7em"
+            source={require('raw-loader!../assets/code-examples/4-counter-class.example')}
+          />
+          <CounterAsClass/>
         </Slide>
       </Deck>
     );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Counter = () => {
+export const CounterWithHook = () => {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
 
