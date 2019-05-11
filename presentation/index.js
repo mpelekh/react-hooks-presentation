@@ -15,6 +15,8 @@ import { Emphasize } from './components/Emphasize';
 // Import Example Components
 import { CounterWithHook } from './components/examples/CounterWithHook';
 import { CounterAsClass } from './components/examples/CounterAsClass';
+import { CounterWithEffectHook } from './components/examples/CounterWithEffectHook';
+import { CounterClassInsteadOfEffect } from './components/examples/CounterClassInsteadOfEffect';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -174,6 +176,49 @@ export default class Presentation extends React.Component {
             source={require('raw-loader!../assets/code-examples/5-multiple-state-variables.example')}
           />
         </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Effect Hook
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            The Effect Hook lets you perform side effects in function components:
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.7em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/6-counter-with-effect-hook.example')}
+          />
+          <CounterWithEffectHook/>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText textSize="40px">
+            If you’re familiar with React class lifecycle methods, you can think of useEffect Hook as <Emphasize>componentDidMount</Emphasize>,
+            {' '}
+            <Emphasize>componentDidUpdate</Emphasize> and <Emphasize>componentWillUnmount</Emphasize> combined.
+          </CustomText>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            Example Using Classes
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.5em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/7-counter-class-instead-of-effect.example')}
+          />
+          <CounterClassInsteadOfEffect/>
+        </Slide>
+
       </Deck>
     );
   }
