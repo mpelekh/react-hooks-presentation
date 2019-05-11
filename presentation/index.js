@@ -123,6 +123,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="jsx"
             textSize="1em"
+            contentEditable={true}
             source={require('raw-loader!../assets/code-examples/1-hook.example')}
           />
         </Slide>
@@ -141,6 +142,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="jsx"
             textSize="0.9em"
+            contentEditable={true}
             source={require('raw-loader!../assets/code-examples/3-counter-hook.example')}
           />
           <CounterWithHook/>
@@ -154,9 +156,23 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="jsx"
             textSize="0.7em"
+            contentEditable={true}
             source={require('raw-loader!../assets/code-examples/4-counter-class.example')}
           />
           <CounterAsClass/>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            Declaring multiple state variables
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/5-multiple-state-variables.example')}
+          />
         </Slide>
       </Deck>
     );
