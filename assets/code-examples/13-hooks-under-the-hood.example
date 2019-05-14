@@ -1,0 +1,29 @@
+let currentlyRenderedCompInstance;
+const compStates = new Map(); // maps component instances to their states
+const compInstances = new Map(); // maps component functions to instances
+
+function useState(initialState) {
+  if (!compStates.has(currentlyRenderedCompInstance))
+    compStates.set(currentlyRenderedCompInstance, initialState);
+
+  return [
+    compStates.get(currentlyRenderedCompInstance) // state
+    val => compStates.set(currentlyRenderedCompInstance, val) // state setter
+  ];
+}
+
+function render(comp, props) {
+  const compInstanceToken = Symbol('Renderer token for ' + comp.name);
+
+  if (!compInstances.has(comp))
+    compInstances.set(comp, new Set());
+
+  compInstances.get(comp).add(compInstanceToken);
+
+  currentlyRenderedCompInstance = compInstanceToken;
+
+  return {
+    instance: compInstanceToken,
+    children: comp(props)
+  };
+}

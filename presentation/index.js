@@ -298,6 +298,39 @@ export default class Presentation extends React.Component {
           align="flex-start flex-start"
         />
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            What's happening under the hood?
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            React hook makes use of hidden state of a component, it's stored inside a <Link href="https://github.com/acdlite/react-fiber-architecture#what-is-a-fiber">fiber</Link>, a fiber is an entity that corresponds to component instance
+            {' '}
+            (in a broader sense, because functional components don't create instances as class components).
+          </CustomText>
+          <Margin top="30px"/>
+          <CustomText>
+            It's React renderer that gives a hook the access to respective context, state, etc. and incidentally, it's React renderer that calls component function.
+            {' '}
+            So it can associate component instance with hook functions that are called inside of component function.
+          </CustomText>
+        </Slide>
+
+        <Slide textColor="textColorLight" style={{ marginTop: '-100px' }}>
+          <CustomText>
+            This snippet explains how it works
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.6em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/13-hooks-under-the-hood.example')}
+          />
+        </Slide>
+
       </Deck>
     );
   }
