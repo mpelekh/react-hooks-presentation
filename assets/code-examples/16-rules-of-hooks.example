@@ -1,0 +1,6 @@
+// 🔴 We're breaking the first rule by using a Hook in a condition
+if (name !== '') {
+  useEffect(function persistForm() {
+    localStorage.setItem('formData', name);
+  });
+}

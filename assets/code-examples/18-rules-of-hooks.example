@@ -1,0 +1,6 @@
+useEffect(function persistForm() {
+  // 👍 We're not breaking the first rule anymore
+  if (name !== '') {
+    localStorage.setItem('formData', name);
+  }
+});

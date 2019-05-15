@@ -331,6 +331,88 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Rules of Hooks
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={5} textColor="secondary">
+            1. Only Call Hooks at the Top Level
+          </Heading>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.9em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/14-rules-of-hooks.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            So how does React know which state corresponds to which useState call? The answer is that React relies on the order in which Hooks are called.
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.9em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/15-rules-of-hooks.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            As long as the order of the Hook calls is the same between renders, React can associate some local state with each of them. But what happens if we put a Hook call (for example, the <Emphasize>persistForm</Emphasize> effect) inside a condition?
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.9em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/16-rules-of-hooks.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            Every next Hook call after the one we skipped would also shift by one, leading to bugs.
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.9em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/17-rules-of-hooks.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            This is why Hooks must be called on the top level of our components.
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.9em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/18-rules-of-hooks.example')}
+          />
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={5} textColor="secondary">
+            2. Only Call Hooks from React Functions
+          </Heading>
+          <CustomText>Don’t call Hooks from regular JavaScript functions. Instead, you can:</CustomText>
+          <List>
+            <ListItem>✅ Call Hooks from React function components</ListItem>
+            <ListItem>✅ Call Hooks from custom Hooks</ListItem>
+          </List>
+        </Slide>
+
       </Deck>
     );
   }
