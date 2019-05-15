@@ -17,6 +17,7 @@ import { CounterWithHook } from './components/examples/CounterWithHook';
 import { CounterAsClass } from './components/examples/CounterAsClass';
 import { CounterWithEffectHook } from './components/examples/CounterWithEffectHook';
 import { CounterClassInsteadOfEffect } from './components/examples/CounterClassInsteadOfEffect';
+import { CounterWithCustomHook } from './components/examples/CounterWithCustomHook';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -411,6 +412,35 @@ export default class Presentation extends React.Component {
             <ListItem>✅ Call Hooks from React function components</ListItem>
             <ListItem>✅ Call Hooks from custom Hooks</ListItem>
           </List>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Building Your Own Hooks
+          </Heading>
+        </Slide>
+
+        <CodeSlide
+          transition={[]}
+          textSize="0.8em"
+          lang="jsx"
+          code={require('raw-loader!../assets/code-examples/19-building-your-own-hooks.example')}
+          ranges={[
+            { loc: [0, 0], title: 'useCounter() hook' },
+            { loc: [3, 11] },
+            { loc: [12, 25] },
+          ]}
+          align="flex-start flex-start"
+        />
+
+        <Slide textColor="textColorLight">
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/20-building-your-own-hooks.example')}
+          />
+          <CounterWithCustomHook/>
         </Slide>
 
       </Deck>

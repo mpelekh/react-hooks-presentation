@@ -1,0 +1,13 @@
+const Counter = () => {
+  const [ count, onIncrease, onDecrease ] = useCounter();
+
+  return (
+    <div>
+      <div>Current count: {count}</div>
+      <div>
+        <button onClick={onDecrease}>-</button>
+        <button onClick={onIncrease}>+</button>
+      </div>
+    </div>
+  );
+};
