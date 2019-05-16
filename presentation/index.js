@@ -514,6 +514,19 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <CustomText>
+            useMemo( )
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/24-use-memo.example')}
+          />
+        </Slide>
+
       </Deck>
     );
   }
