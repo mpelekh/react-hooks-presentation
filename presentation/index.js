@@ -553,6 +553,21 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            useLayoutEffect( )
+          </Heading>
+          <CustomText>
+            The signature is identical to <Emphasize>useEffect</Emphasize>, but it fires synchronously after all DOM mutations.
+          </CustomText>
+          <CustomText>
+            Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside <Emphasize>useLayoutEffect</Emphasize> will be flushed synchronously, before the browser has a chance to paint.
+          </CustomText>
+          <CustomText>
+            Prefer the standard <Emphasize>useEffect</Emphasize> when possible to avoid blocking visual updates.
+          </CustomText>
+        </Slide>
+
       </Deck>
     );
   }
