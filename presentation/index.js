@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, ListItem, List, Quote, Slide, Text, CodePane, Fit, Fill, Image, Layout } from 'spectacle';
+import { BlockQuote, Cite, Deck, Heading, ListItem, List, Quote, Slide as BaseSlide, Text, CodePane, Fit, Fill, Image, Layout } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 
 // Import Components
@@ -11,6 +11,7 @@ import { CustomText } from './components/CustomText';
 import { Margin } from './components/Margin';
 import { CustomLink as Link } from './components/CustomLink';
 import { Emphasize } from './components/Emphasize';
+import {UpdateTitle} from './components/UpdateTitle';
 
 // Import Example Components
 import { CounterWithHook } from './components/examples/CounterWithHook';
@@ -25,6 +26,13 @@ import createTheme from 'spectacle/lib/themes/default';
 
 // Require CSS
 require('normalize.css');
+
+const Slide = (props) => (
+  <>
+    <UpdateTitle title="React Hooks"/>
+    <BaseSlide {...props}>{props.children}</BaseSlide>
+  </>
+);
 
 const theme = createTheme({
   primary: '#282c34',
