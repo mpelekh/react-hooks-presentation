@@ -18,6 +18,7 @@ import { CounterAsClass } from './components/examples/CounterAsClass';
 import { CounterWithEffectHook } from './components/examples/CounterWithEffectHook';
 import { CounterClassInsteadOfEffect } from './components/examples/CounterClassInsteadOfEffect';
 import { CounterWithCustomHook } from './components/examples/CounterWithCustomHook';
+import { CounterWithCustomHookWithDebugValue } from './components/examples/CounterWithCustomHookWithDebugValue';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
@@ -476,9 +477,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useContext( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -489,9 +490,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight" style={{ marginTop: '-100px' }}>
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useReducer( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -502,9 +503,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useCallback( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -515,9 +516,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useMemo( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -528,9 +529,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useRef( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -541,9 +542,9 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <CustomText>
+          <Heading size={4} textColor="secondary">
             useImperativeHandle( )
-          </CustomText>
+          </Heading>
           <Margin/>
           <CodePane
             lang="jsx"
@@ -554,7 +555,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide textColor="textColorLight">
-          <Heading size={2} textColor="secondary">
+          <Heading size={4} textColor="secondary">
             useLayoutEffect( )
           </Heading>
           <CustomText>
@@ -566,6 +567,20 @@ export default class Presentation extends React.Component {
           <CustomText>
             Prefer the standard <Emphasize>useEffect</Emphasize> when possible to avoid blocking visual updates.
           </CustomText>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={4} textColor="secondary">
+            useDebugValue( )
+          </Heading>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/27-use-debug-value.example')}
+          />
+          <CounterWithCustomHookWithDebugValue/>
         </Slide>
 
       </Deck>

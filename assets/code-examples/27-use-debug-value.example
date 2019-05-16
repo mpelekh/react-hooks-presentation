@@ -1,0 +1,10 @@
+const useCounter = () => {
+  const [count, setCount] = useState(0);
+
+  const onIncrease = () => setCount(count + 1);
+  const onDecrease = () => setCount(count - 1);
+
+  useDebugValue(`This is value added by mpelekh. count is equal ${count}`);
+
+  return [count, onIncrease, onDecrease];
+};
