@@ -56,6 +56,11 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>Existing Problems</ListItem>
             <ListItem>Hooks Introduction</ListItem>
+            <ListItem>What's happening under the hood?</ListItem>
+            <ListItem>Rules of Hooks</ListItem>
+            <ListItem>Building Your Own Hooks</ListItem>
+            <ListItem>Hooks API Reference</ListItem>
+            <ListItem>Conclusions</ListItem>
           </List>
         </Slide>
 
