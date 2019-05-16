@@ -488,6 +488,19 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide textColor="textColorLight" style={{ marginTop: '-100px' }}>
+          <CustomText>
+            useReducer( )
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.8em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/22-use-reducer.example')}
+          />
+        </Slide>
+
       </Deck>
     );
   }
