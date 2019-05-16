@@ -1,0 +1,11 @@
+function PostComponent({ author, title, body, comments }) {
+  return (
+    <article>
+      <header>{title} by {author.email}</header>
+      <section>{body}</section>
+      <Comments comments={comments}/>
+    </article>
+  );
+}
+
+connect(({ post }) => ({ ...post }))(PostComponent);

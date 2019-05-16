@@ -1,0 +1,11 @@
+function PostComponent() {
+  const { post: { author, title, body, comments } } = useRedux();
+
+  return (
+    <article>
+      <header>{title} by {author.email}</header>
+      <section>{body}</section>
+      <Comments comments={comments}/>
+    </article>
+  );
+}

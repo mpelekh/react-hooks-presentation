@@ -604,6 +604,38 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Other Interesting Stuff
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            👍 <Link href="https://medium.com/@jackyef/react-hooks-why-we-should-embrace-it-86e408663ad6">Allow your code to be minified better</Link>
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight" style={{ marginTop: '-100px' }}>
+          <Heading size={4} textColor="secondary">
+            👎 Possible Tight Coupling
+          </Heading>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.8em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/28-loose-coupling.example')}
+          />
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="0.8em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/29-tight-coupling.example')}
+          />
+        </Slide>
+
       </Deck>
     );
   }
