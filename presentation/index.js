@@ -636,6 +636,19 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide>
+          <Heading size={1} textColor="secondary">
+            Thank you!
+          </Heading>
+          <CustomText textAlign="center">Mykola Pelekh</CustomText>
+        </Slide>
+
+        <Slide>
+          <Heading size={1} textColor="secondary">
+            Questions?
+          </Heading>
+        </Slide>
+
       </Deck>
     );
   }
