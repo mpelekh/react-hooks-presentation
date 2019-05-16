@@ -588,6 +588,22 @@ export default class Presentation extends React.Component {
           <CounterWithCustomHookWithDebugValue/>
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Useful Links
+          </Heading>
+          <List textColor="textColorLight" style={{ listStyleType: 'none' }}>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-intro.html"><code>Hooks Intro</code></Link></ListItem>
+            <ListItem><Link href="https://www.npmjs.com/package/eslint-plugin-react-hooks"><code>eslint-plugin-react-hooks</code></Link></ListItem>
+            <ListItem><Link href="https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889"><code>Making Sense of React Hooks (by Dan Abramov)</code></Link></ListItem>
+            <ListItem><Link href="https://medium.com/@jackyef/react-hooks-why-we-should-embrace-it-86e408663ad6"><code>React Hooks: Why We should Embrace it</code></Link></ListItem>
+            <ListItem><Link href="https://overreacted.io/why-do-hooks-rely-on-call-order/"><code>Why Do React Hooks Rely on Call Order?</code></Link></ListItem>
+            <ListItem><Link href="https://overreacted.io/a-complete-guide-to-useeffect/"><code>A Complete Guide to useEffect</code></Link></ListItem>
+            <ListItem><Link href="https://overreacted.io/how-does-setstate-know-what-to-do/"><code>How Does setState Know What to Do?</code></Link></ListItem>
+            <ListItem><Link href="https://overreacted.io/"><code>Overreacted (Dan Abramov's blog)</code></Link></ListItem>
+          </List>
+        </Slide>
+
       </Deck>
     );
   }
