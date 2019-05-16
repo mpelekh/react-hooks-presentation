@@ -527,6 +527,19 @@ export default class Presentation extends React.Component {
           />
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <CustomText>
+            useRef( )
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/25-use-ref.example')}
+          />
+        </Slide>
+
       </Deck>
     );
   }
