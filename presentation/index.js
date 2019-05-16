@@ -426,7 +426,7 @@ export default class Presentation extends React.Component {
           lang="jsx"
           code={require('raw-loader!../assets/code-examples/19-building-your-own-hooks.example')}
           ranges={[
-            { loc: [0, 0], title: 'useCounter() hook' },
+            { loc: [0, 0], title: 'useCounter( ) custom hook' },
             { loc: [3, 11] },
             { loc: [12, 25] },
           ]}
@@ -473,6 +473,19 @@ export default class Presentation extends React.Component {
             <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#uselayouteffect"><code>useLayoutEffect()</code></Link></ListItem>
             <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usedebugvalue"><code>useDebugValue()</code></Link></ListItem>
           </List>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <CustomText>
+            useContext( )
+          </CustomText>
+          <Margin/>
+          <CodePane
+            lang="jsx"
+            textSize="1em"
+            contentEditable={true}
+            source={require('raw-loader!../assets/code-examples/21-use-context.example')}
+          />
         </Slide>
 
       </Deck>
