@@ -1,0 +1,8 @@
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+
+<Component handler={memoizedCallback}/>
