@@ -443,6 +443,38 @@ export default class Presentation extends React.Component {
           <CounterWithCustomHook/>
         </Slide>
 
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Other hooks
+          </Heading>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Basic Hooks
+          </Heading>
+          <List textColor="textColorLight" style={{ listStyleType: 'none' }}>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usestate"><code>useState()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#useeffect"><code>useEffect()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usecontext"><code>useContext()</code></Link></ListItem>
+          </List>
+        </Slide>
+
+        <Slide textColor="textColorLight">
+          <Heading size={2} textColor="secondary">
+            Additional Hooks
+          </Heading>
+          <List textColor="textColorLight" style={{ listStyleType: 'none' }}>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usereducer"><code>useReducer()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usecallback"><code>useCallback()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usememo"><code>useMemo()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#useref"><code>useRef()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#useimperativehandle"><code>useImperativeHandle()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#uselayouteffect"><code>useLayoutEffect()</code></Link></ListItem>
+            <ListItem><Link href="https://reactjs.org/docs/hooks-reference.html#usedebugvalue"><code>useDebugValue()</code></Link></ListItem>
+          </List>
+        </Slide>
+
       </Deck>
     );
   }
